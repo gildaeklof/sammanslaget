@@ -19,8 +19,8 @@ body {
   height: 100%;
 }
 #unity-canvas {
-  background: #231f20;
-  width: 75vw;
+  background: rgb(123, 134, 137);
+  /* width: 75vw; */
   /* height: calc(100vh - 70px); */
 }
 /* .unity-mobile #unity-canvas {

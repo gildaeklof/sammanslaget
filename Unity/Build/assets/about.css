@@ -4,7 +4,9 @@ body {
   padding: 0;
   margin: 0;
   background-color: rgb(150, 168, 172);
+  overflow-x: hidden;
 }
+
 main {
   width: 100vw;
   display: flex;
@@ -38,14 +40,25 @@ main {
 .right {
   margin: 23px 0px 0px 210px;
 }
+h1,
 h2,
 p,
 a {
   font-family: "Noto Sans JP", sans-serif;
 }
+h1 {
+  border-bottom: 2px solid;
+  padding-bottom: 20px;
+  border-color: rgb(40, 94, 97);
+  text-align: center;
+  margin-bottom: 50px;
+}
 a {
   color: rgb(67, 148, 144);
   text-decoration: none;
+}
+.left > a {
+  margin-right: 30px;
 }
 a.underline {
   position: relative;
@@ -61,7 +74,7 @@ a.underline:before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: rgb(211, 130, 83);
+  background-color: rgb(40, 94, 97);
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.4s ease-in-out;
