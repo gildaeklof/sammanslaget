@@ -1,4 +1,6 @@
 body {
+  height: 100vh;
+  width: 100vw;
   padding: 0;
   margin: 0;
   background-color: rgb(150, 168, 172);
@@ -94,15 +96,14 @@ header {
   margin: 23px 0px 0px 27px;
 }
 .right {
-  margin: 20px 0px 0px 350px;
+  margin: 23px 0px 0px 480px;
 }
-.left-link {
-  flex: 50%;
-}
+.left-link,
 .right-link {
   flex: 50%;
+  height: 70px;
 }
-.right > a {
+.left > a {
   margin: 15px;
 }
 

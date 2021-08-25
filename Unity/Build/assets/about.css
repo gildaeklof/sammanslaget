@@ -1,4 +1,8 @@
 body {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
   background-color: rgb(150, 168, 172);
 }
 main {
@@ -8,6 +12,7 @@ main {
 }
 .div-1 {
   flex: 20%;
+  height: 70px;
 }
 .div-2 {
   display: flex;
@@ -21,12 +26,13 @@ main {
 }
 .div-3 {
   flex: 20%;
+  height: 70px;
 }
 .left {
-  margin: 15px 0px 0px 15px;
+  margin: 23px 0px 0px 42px;
 }
 .right {
-  margin: 15px 0px 0px 180px;
+  margin: 23px 0px 0px 210px;
 }
 h2,
 p,
