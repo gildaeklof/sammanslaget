@@ -6,7 +6,7 @@
     <title>Kärleken är större</title>
     <link
       rel="shortcut icon"
-      href="/Unity/Build/TemplateData/favicon.ico"
+      href="/Unity/Build/assets/favicon.ico"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="/Unity/Build/assets/style.css" />
@@ -42,11 +42,6 @@
       <div id="unity-mobile-warning">
         WebGL builds are not supported on mobile devices.
       </div>
-      <div id="unity-footer">
-        <!-- <div id="unity-webgl-logo"></div> -->
-        <!-- <div id="unity-fullscreen-button"></div> -->
-        <!-- <div id="unity-build-title">KoR</div> -->
-      </div>
     </div>
     <script>
       var buildUrl = "/Unity/Build/Build";
@@ -65,7 +60,6 @@
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      /* var fullscreenButton = document.querySelector("#unity-fullscreen-button"); */
       var mobileWarning = document.querySelector("#unity-mobile-warning");
 
       // By default Unity keeps WebGL canvas render target size matched with
@@ -86,7 +80,7 @@
         }, 5000);
       } else {
         canvas.style.width = "1000px";
-        canvas.style.height = "640px";
+        canvas.style.height = "calc(100vh - 60px)";
       }
       loadingBar.style.display = "block";
 
@@ -98,9 +92,6 @@
         })
           .then((unityInstance) => {
             loadingBar.style.display = "none";
-            /* fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          }; */
           })
           .catch((message) => {
             alert(message);
