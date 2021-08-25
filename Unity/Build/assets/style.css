@@ -1,6 +1,6 @@
 body {
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
   padding: 0;
   margin: 0;
   background-color: rgb(123, 134, 137);
@@ -87,10 +87,13 @@ header {
   display: flex;
 }
 .left {
-  margin: 23px 0px 0px 27px;
+  float: left;
+  padding: 23px 0px 0px 40px;
 }
 .right {
-  margin: 23px 0px 0px 480px;
+  float: right;
+  padding: 23px 40px 0px 0px;
+  /* margin: 23px 0px 0px 480px; */
 }
 .left-link,
 .right-link {
@@ -98,7 +101,7 @@ header {
   height: 70px;
 }
 .left > a {
-  margin: 15px;
+  margin-right: 15px;
 }
 
 a:before {
