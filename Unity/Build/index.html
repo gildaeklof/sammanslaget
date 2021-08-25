@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | KoR</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Kärleken är större</title>
+    <link
+      rel="shortcut icon"
+      href="TemplateData/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <header>
+      <div class="left-link">
+        <div class="left">
+          <a href="index.html">Hem</a>
+        </div>
+      </div>
+      <div class="right-link">
+        <div class="right">
+          <a href="https://raddningsmissionen.se/">Räddningmissionen</a>
+          <a href="assets/about.html">Om oss</a>
+        </div>
+      </div>
+    </header>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width="960" height="600"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -20,9 +43,9 @@
         WebGL builds are not supported on mobile devices.
       </div>
       <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">KoR</div>
+        <!-- <div id="unity-webgl-logo"></div> -->
+        <!-- <div id="unity-fullscreen-button"></div> -->
+        <!-- <div id="unity-build-title">KoR</div> -->
       </div>
     </div>
     <script>
@@ -42,7 +65,7 @@
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      /* var fullscreenButton = document.querySelector("#unity-fullscreen-button"); */
       var mobileWarning = document.querySelector("#unity-mobile-warning");
 
       // By default Unity keeps WebGL canvas render target size matched with
@@ -62,8 +85,8 @@
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "1000px";
+        canvas.style.height = "640px";
       }
       loadingBar.style.display = "block";
 
@@ -72,14 +95,16 @@
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
+        })
+          .then((unityInstance) => {
+            loadingBar.style.display = "none";
+            /* fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
+          }; */
+          })
+          .catch((message) => {
+            alert(message);
+          });
       };
       document.body.appendChild(script);
     </script>
