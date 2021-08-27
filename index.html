@@ -41,7 +41,7 @@
       </div>
     </header>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width="1280" height="720"></canvas>
+      <canvas id="unity-canvas"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -87,10 +87,10 @@
         setTimeout(() => {
           mobileWarning.style.display = "none";
         }, 5000);
-      } else {
+      } /* else {
         canvas.style.width = "1080px";
         canvas.style.height = "800px";
-      }
+      } */
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");

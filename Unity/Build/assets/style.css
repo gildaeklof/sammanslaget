@@ -5,6 +5,10 @@ body {
   margin: 0;
   background-color: rgb(120, 134, 138);
 }
+canvas {
+  width: 60vw;
+  height: calc(90vw * 9 / 16);
+}
 #unity-container {
   position: absolute;
 }
